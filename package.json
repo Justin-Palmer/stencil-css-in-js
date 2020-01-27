@@ -1,0 +1,41 @@
+{
+  "name": "stencil-css-in-js",
+  "version": "0.0.1",
+  "description": "CSS-in-JS library for StencilJs",
+  "author": "Justin Palmer",
+  "license": "MIT",
+  "keywords": [
+    "Stencil",
+    "StencilJs",
+    "Decorator",
+    "CSS-in-JS",
+    "CssInJs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justin-Palmer/stencil-css-in-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Justin-Palmer/stencil-css-in-js/issues"
+  },
+  "homepage": "https://github.com/Justin-Palmer/stencil-css-in-js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "jss": "10.0.3",
+    "jss-preset-default": "10.0.3"
+  },
+  "peerDependencies": {
+    "@stencil/core": "^1.2.0"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.2.0",
+    "typescript": "^3.7.2"
+  }
+}

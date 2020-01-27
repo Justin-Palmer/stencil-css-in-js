@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil-css-in-js.esm.js"></script>
+    <script nomodule src="/build/stencil-css-in-js.js"></script>
+  </head>
+  <body>
+    <theme-provider>
+      <css-in-js-test>
+        Text
+      </css-in-js-test>
+    </theme-provider>
+
+    <script>
+      let themeProvider = document.querySelector("theme-provider");
+      themeProvider.theme = {
+        ...themeProvider.theme,
+        background: "black"
+      };
+
+      setTimeout(() => {
+        themeProvider.theme = {
+          ...themeProvider.theme,
+          background: "green",
+          CssInJsTest: {
+            root: {
+              padding: "48px"
+            }
+          }
+        };
+
+        setTimeout(() => {
+          let themeProvider = document.querySelector("theme-provider");
+
+          themeProvider.theme = {
+            ...themeProvider.theme,
+            background: "gray"
+          };
+        }, 1000);
+      }, 1000);
+    </script>
+  </body>
+</html>
