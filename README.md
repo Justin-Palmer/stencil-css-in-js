@@ -1,6 +1,6 @@
 # CSS-In-JS <!-- omit in toc -->
 
-`stencil-css-in-js` is a decorator to allow using JSS with Stencil components to support stronger theming and style override functionality.
+`stencil-css-in-js` is a decorator for using JSS with Stencil components to support stronger theming and style override functionality.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -40,6 +40,7 @@ const styles = {
   shadow: true
 })
 export class CssInJsTest {
+  // componentWillLoad is required due to StencilJs build optimizations
   componentWillLoad() {}
 
   @CssInJs({
@@ -82,6 +83,7 @@ const styles = {
   shadow: true
 })
 export class CssInJsTest {
+  // componentWillLoad is required due to StencilJs build optimizations
   componentWillLoad() {}
 
   @CssInJs({
@@ -134,6 +136,7 @@ export class CssInJsTest {
     }
   };
 
+  // componentWillLoad is required due to StencilJs build optimizations
   componentWillLoad() {}
 
   @CssInJs({
